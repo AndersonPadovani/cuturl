@@ -1,0 +1,78 @@
+#root{
+    --collor-background: rgb(41, 40, 40);
+}
+
+*{
+    width: 100%;
+    height: auto;
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#root{
+    background-color: var(--collor-background);
+}
+
+.container{
+    width: 70%;
+    height: 100vh;
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.menu{
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 0px;
+}.menu img{
+
+}.menu ul{
+    display: flex;
+    text-align: right;
+    max-width: 300px;
+}.menu li, a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.mid{
+    width: 100%;
+}
+
+.cut{
+    display: flex;
+    position: relative;
+}
+
+._label{
+    position: absolute;
+    top: 12px;
+    left: 20px;
+
+    color: green;
+
+    z-index: 1;
+}
+
+._input:focus ~ ._label{
+    top: -5px;
+}
+
+button{
+    max-width: 225px;
+    height: 50px;
+}
