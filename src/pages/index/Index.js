@@ -2,10 +2,11 @@ import React from "react";
 import './Index.css';
 
 const Index = () =>{
+
     return(
         <div className="container">
             <section className="menu">
-                <img src="#" alt="Imagen Logo CutUrl" />
+                <img src={require('../../img/logo.png')} alt="Imagen Logo CutUrl" />
 
                 <ul>
                     <li key='1'><a href="/#">ENCURTAR</a></li>
@@ -15,16 +16,13 @@ const Index = () =>{
             </section>
             
             <section className="mid">
-                <div className="cut">
-                    <label className="_label" htmlFor='url'>url</label>
-                    <input className="_input" id="url" type='text'></input>
+                <form action="">
+                    <input id="inputUrl" type="text" required/>
+                    <label htmlFor="inputUrl">URL</label>
 
-                    <button>Encurtar</button>
-                </div>
-
-                <div className="cuted">
-
-                </div>
+                    <button>ENCURTAR</button>
+                </form>
+                
             </section>
 
             <footer>

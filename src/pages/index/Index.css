@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Gajraj+One&family=Roboto+Slab:wght@300;400&display=swap');
+
 #root{
     --collor-background: rgb(41, 40, 40);
+    --collor-background-input: rgba(70, 70, 70, 0.5);
+    --collor-background-button: rgba(48, 139, 48, 0.774);
+    --collor-withe-smof: #dddd;
+    --collor-orange-border: rgb(254, 78, 0);
+    --collor-orange: rgb(254, 78, 0, 0.6);
+    --collor-blue: rgb(36, 167, 207);
+    --collor-dark-blue: rgb(10, 107, 136);
 }
 
 *{
@@ -9,6 +18,10 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+
+    
+    font-family: 'Roboto Slab', serif;
+    color: var(--collor-withe-smof);
 }
 
 #root{
@@ -30,7 +43,7 @@
 
 .menu{
     width: 100%;
-    height: 70px;
+    height: 100px;
 
     display: flex;
     align-items: center;
@@ -38,7 +51,9 @@
 
     position: absolute;
     top: 0px;
+
 }.menu img{
+    max-width: 275px;
 
 }.menu ul{
     display: flex;
@@ -47,32 +62,90 @@
 }.menu li, a{
     list-style: none;
     text-decoration: none;
+
+    margin-left: 10px;
+
+    font-size: 12pt;
+
+    color: var(--collor-blue);
 }
 
 .mid{
     width: 100%;
 }
 
-.cut{
+form{
+    width: 100%;
     display: flex;
+
+    justify-content: center;
+
     position: relative;
 }
-
-._label{
+label{
     position: absolute;
-    top: 12px;
-    left: 20px;
+    top: 11px;
+    left: 60px;
 
-    color: green;
+    width: auto;
+    height: auto;
 
-    z-index: 1;
+    padding: 0px 10px 0px 10px;
+
+
+    font-size: 14pt;
+    font-weight: 500;
+
+    border-radius: 5px;
+
+
+    transition: all 0.5s;
+}
+input{
+    height: 50px;
+    width: 70%;
+
+    padding-left: 20px;
+
+    font-size: 14pt;   
+
+    border: 2px solid var(--collor-orange-border);
+
+    outline-style: none;
+    border-radius: 10px;
+
+    background-color: var(--collor-background);
 }
 
-._input:focus ~ ._label{
-    top: -5px;
+input:focus ~ label, input:valid ~ label{
+    top: -14px;
+    background-color: var(--collor-orange-border);
 }
 
 button{
-    max-width: 225px;
     height: 50px;
+    width: 20%;
+
+    margin-left: 20px;
+    border-radius: 10px;
+    border-style: none;
+
+    font-weight: 700;
+    font-size: 16pt;
+    letter-spacing: .2rem;
+
+    background-color: var(--collor-orange);
+
+    transition: all 0.5s;
+}
+button:active{
+    transform: scale(1.05);
+}
+
+input, button{
+    transition: all 0.2s;
+    box-shadow: 2px 2px 15px -2px var(--collor-orange);
+}
+input:hover, button:hover{
+    box-shadow: 3px 3px 5px 0px var(--collor-orange);
 }
