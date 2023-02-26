@@ -9,6 +9,7 @@
     --collor-orange: rgb(254, 78, 0, 0.6);
     --collor-blue: rgb(36, 167, 207);
     --collor-dark-blue: rgb(10, 107, 136);
+    --collor-green: rgb(103, 166, 146);
 }
 
 *{
@@ -72,6 +73,10 @@
 
 .mid{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 form{
@@ -148,4 +153,53 @@ input, button{
 }
 input:hover, button:hover{
     box-shadow: 3px 3px 5px 0px var(--collor-orange);
+}
+
+.linkStatus{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 150px;
+
+    margin-top: 50px;
+    border-radius: 30px;
+
+    text-align: center;
+
+    font-size: 16pt;
+
+    background-color: var(--collor-green);
+}
+
+.linkStatus a{
+    font-size: 16pt;
+    font-weight: 600;
+    color: var(--collor-dark-blue);
+}
+
+.linkStatus a:hover{
+    text-decoration: underline;
+}
+
+.errorLink{
+    position: absolute;
+    text-align: center;
+    width: auto;
+    padding: 15px;
+    border-radius: 10px;
+    top: 100px;
+
+    background-color: var(--collor-orange);
+}.errorLink strong:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--collor-withe-smof) !important;
 }
